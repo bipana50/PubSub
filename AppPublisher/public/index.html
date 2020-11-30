@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.io publish msg</title>
+  </head>
+  <body>
+    <div class="container">
+      <div style="margin-bottom: 40px">Send Message:</div>
+
+      <input type="text" class="message-input" placeholder="Type a message" />
+      <div style="margin-top: 20px; margin-bottom: 10px">Select Priority:</div>
+      <select id="priority">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <div>
+        <button style="margin-top: 20px" class="message-form-button">
+          Enter
+        </button>
+      </div>
+      <div style="margin-top: 40px">
+        OR Publish 20 random messages per second:
+      </div>
+      <div>
+        <button style="margin-top: 20px" class="message-random-button">
+          Publish 20 random messages per second
+        </button>
+      </div>
+
+      <div>
+        <button style="margin-top: 20px" class="stop-message-button">
+          stop sending messsages
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
