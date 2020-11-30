@@ -46,7 +46,9 @@
   <a href="http://localhost:5000/">5000</a>.
 
 - The publisher has two options, publisher can pass the message and priority one at a time or pass 20 messages per second continuosly by clicking the button. This continuity can be stopped by pressing the stop sending messages button.
+
   <img src="./images/publisher.png" />
 
 - The subscriber app only display the messages from the queue if the priority is greater or equal to 7.
+
   <img src="./images/subscriber.png" />
