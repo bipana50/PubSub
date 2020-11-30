@@ -21,4 +21,28 @@ WebSocket is a computer communications protocol, providing full-duplex communica
 4. Steps for Setup
 
 - The repository contains two applications, a Publisher application (./AppPublisher) and a Subscriber application(./AppSubscriber)
+
 - The first thing that need to be setup is rabbitMQ instance, it can be set both locally and in cloud. I created a free account for cloud setup at <a href="https://www.cloudamqp.com/">cloudamqp</a>
+
+- After creating the free account, create a new instance with any name
+- Then click on the instance name in the instance table. There in the Details section copy the AMPQ url and save it inside (./AppPublisher/config.json) and (./AppSubscriber/config.json)
+
+- Now click "RabbitMQ Manager" on the instance table and on the queues column
+
+- Add a new queue, give it any name, put Durability to 'Durable'and add 'Maximum priority' or 'x-max-priority' argument and give it a value of 10.
+
+- After the queue is created, copy the queue name and save it inside (./AppPublisher/config.json) and (./AppSubscriber/config.json)
+
+- To install all dependencies perform "npm install" inside both (./AppPublisher) and (./AppSubscriber)
+
+- To run, perform "node server.js" inside both (./AppPublisher) and (./AppSubscriber)
+  in two terminals.
+
+- The publisher is serving at port <a href="http://localhost:3000/">3000</a> and the subscriber is serving at port
+  <a href="http://localhost:5000/">5000</a>.
+
+- The publisher has two options, publisher can pass the message and priority one at a time or pass 20 messages per second continuosly by clicking the button. This continuity can be stopped by pressing the stop sending messages button.
+  <img src="./images/publisher.png" />
+
+- The subscriber app only display the messages from the queue if the priority is greater or equal to 7.
+  <img src="./images/subscriber.png" />
