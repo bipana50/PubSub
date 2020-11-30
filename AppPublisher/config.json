@@ -1,0 +1,4 @@
+{
+    "rabbitConnectUrl" : "replace with your AMPQ url or rabbit MQ local setup URL here",
+    "queueName": "replace-with-your-queue-name"
+}
